@@ -1,0 +1,73 @@
+div {
+  
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    // background-image: url('../../assets/background/space-background.jpg');
+    // background-size: cover;
+    /* Ajusta a imagem para cobrir todo o contêiner */
+    background-color: rgb(53, 53, 53);
+    background-position: center;
+    margin-bottom: 0;
+    padding-bottom: 5rem;
+    padding-top: 2rem;
+    color: #fff;
+  }
+}
+
+.carousel {
+  // background-image: url('../../assets/background/space-background.jpg');
+  // background-size: cover;
+  /* Ajusta a imagem para cobrir todo o contêiner */
+  background-position: center;
+  /* Centraliza a imagem no contêiner */
+  color: #fff;
+  background-color: rgb(53, 53, 53);
+
+  .carousel-slider {
+    width: 100%;
+    /* Ajusta a largura do carrossel */
+  }
+
+  .slide {
+    width: 100%;
+    /* Ajusta a largura do slide */
+    height: auto;
+    /* Ajusta a altura do slide */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .content {
+    margin: 0 auto;
+    max-width: 600px;
+    color: #fff;
+
+  }
+
+  .avatar {
+    // margin-top: 1rem;
+    height: 100px;
+    max-width: 100px;
+    border-radius: 50%;
+    // margin-bottom: 20px;
+    color: #fff;
+
+  }
+
+  .quote {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #fff;
+
+  }
+
+  .author {
+    font-weight: bold;
+    color: #fff;
+
+  }
+}

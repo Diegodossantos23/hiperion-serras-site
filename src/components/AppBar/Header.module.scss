@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+
+    .logo {
+        font-size: 24px;
+        margin-left: 3rem;
+        color: white;
+
+    }
+
+    .nav {
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            margin-right: 5rem;
+
+            li {
+                display: inline-block;
+                margin-left: 20px;
+                margin-right: 1rem;
+                color: white;
+
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: inset 0 -2px 0 #F2BF27;
+                    border-radius: 0.1rem;
+                }
+            }
+
+        }
+    }
+
+    // Estilos adicionais para tornar o header responsivo
+    @media screen and (max-width: 768px) {
+        // flex-direction: column;
+        // align-items: flex-end;
+
+        .nav {
+            flex-direction: column;
+            align-items: flex-end;
+            ul {
+                li {
+                    margin: 10px 0;
+                    display: block;
+                }
+            }
+        }
+    }
+}
