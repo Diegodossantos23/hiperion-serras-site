@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from './Hero.module.scss'; // Estilo do conteúdo inicial
-// import videoSerras from '../../assets/videos/machine-video.mp4'; 
+import styles from './Hero.module.scss'; 
 
 const Hero = () => {
 
