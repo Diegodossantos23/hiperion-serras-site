@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a93eb352.css",
+    "main.js": "/static/js/main.363dd994.js",
+    "static/js/453.a544115c.chunk.js": "/static/js/453.a544115c.chunk.js",
+    "static/media/hiperserras-site.png": "/static/media/hiperserras-site.f880b2cf13d6801790f8.png",
+    "static/media/sobre.jpg": "/static/media/sobre.ba0038764a3d9f6ddcf8.jpg",
+    "static/media/company-background.jpg": "/static/media/company-background.f18529f14315ac9cb6a8.jpg",
+    "static/media/hiperion-logo.svg": "/static/media/hiperion-logo.bcd5023288663e956d4a0f7e0b0bb635.svg",
+    "static/media/avatar.jpg": "/static/media/avatar.2d79333ab3d051707b6c.jpg",
+    "static/media/wikus.png": "/static/media/wikus.5aac7f161e238270112d.png",
+    "static/media/fibra.png": "/static/media/fibra.e4545a3775d60477090e.png",
+    "index.html": "/index.html",
+    "main.a93eb352.css.map": "/static/css/main.a93eb352.css.map",
+    "main.363dd994.js.map": "/static/js/main.363dd994.js.map",
+    "453.a544115c.chunk.js.map": "/static/js/453.a544115c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a93eb352.css",
+    "static/js/main.363dd994.js"
+  ]
+}
