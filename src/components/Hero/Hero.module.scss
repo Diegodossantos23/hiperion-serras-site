@@ -62,7 +62,7 @@ button:nth-child(1) {
   transition: background-color 0.3s ease;
   
   &:hover {
-    color: #D39E00;
+    background-color: #D39E00;
   }
 }
 
@@ -76,9 +76,9 @@ button:nth-child(2) {
   cursor: pointer;
   transition: background-color 0.3s ease;
   
-  &:hover {
-    border: 1px solid #D39E00;
-  }
+  // &:hover {
+  //   border: 1px solid #D39E00;
+  // }
 }
 
 
