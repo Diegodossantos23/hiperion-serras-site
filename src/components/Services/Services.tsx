@@ -1,11 +1,17 @@
 import React from 'react';
 import styles from './Services.module.scss';
 import Company from '../../assets/background/company-background.jpg';
+import ArrowRightICon from '../../assets/icons/arrow-right-icon.png';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { faArrowAltCircleDown, faArrowAltCircleRight, faArrowRight, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Services = () => {
     return (
         <div className={styles.services}>
-            <h2 className={styles.servicesTitle}>Serviços que oferecemos</h2>
+            <h2 className={styles.servicesTitle}>
+                <FontAwesomeIcon style={{marginRight:'1rem', color: '#D39E00'}} icon={faArrowRight} />
+                Nossos Serviços</h2>
             <p className={styles.servicesSubTitle}>
                 Somos especialistas em serra circular, máquinas de serra fita, laminas de serra fita, máquinas de serra circular e consultoria técnica. Oferecemos produtos de extrema qualidade e preços altamente competitivos com o intuito de promover o melhor desempenho na operação e custo beneficio do cliente
             </p>

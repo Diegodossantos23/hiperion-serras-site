@@ -18,13 +18,13 @@ function App() {
     <div className="App">
    <DrawerAppBar/>
    <Hero/>
-   <AboutUs/>
+   {/* <AboutUs/> */}
    <Services/>
-   <PartnersAndCustomers/>
+   {/* <PartnersAndCustomers/>
    <Products/>
    <TestimonialsCarousel/>
    <BlogCarousel/>
-   <ContactForm/>
+   <ContactForm/> */}
    <Footer/>
 
    <WhatsAppButton/>

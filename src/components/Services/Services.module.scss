@@ -18,25 +18,61 @@
 }
 
 .servicesTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     margin-bottom: 2rem;
     color: #505050;
+
+
 
     @media screen and (max-width: 768px) {
         font-size: 20px;
     }
 }
 
+.arrowIcon {
+    width: 100px;
+    color: #D39E00;
+}
+
+
 .servicesSubTitle {
     font-size: 1rem;
     width: 50%;
+    color: #505050;
+    margin-bottom: 3.5rem;
+       text-align: center;
+    align-items: center;
+}
+
+.serviceCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.serviceDescription,
+.serviceInfo {
+    color: #505050;
+}
+
+.serviceInfo {
+    width: 80%;
+    text-align: center;
+    align-items: center;
 }
 
 
 .servicesContainer {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+ 
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
@@ -55,7 +91,7 @@
     .img {
         border: 1px solid black;
         height: 200px;
-        width: auto;
+        width: 100%;
         background-image: url('../../assets/background/company-background.jpg');
         background-size: cover;
         /* Ajusta a imagem para cobrir todo o contêiner */
