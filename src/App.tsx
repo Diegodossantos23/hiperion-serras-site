@@ -20,11 +20,11 @@ function App() {
    <Hero/>
    {/* <AboutUs/> */}
    <Services/>
-   {/* <PartnersAndCustomers/>
+   <PartnersAndCustomers/>
    <Products/>
    <TestimonialsCarousel/>
    <BlogCarousel/>
-   <ContactForm/> */}
+   <ContactForm/> 
    <Footer/>
 
    <WhatsAppButton/>
