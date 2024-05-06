@@ -25,7 +25,7 @@ const Header = () => {
     setAnchorEl(null);
   };
 
-  const navItems = ['Inicio', 'Sobre', 'Produtos e Serviços', 'Testemunhas', 'Blog'];
+  const navItems = ['Inicio', 'Sobre', 'Produtos e Serviços',  'Blog', 'Contato'];
   const servicesSubItems = ['Serras circulares', 'Lâminas serra fita', 'Máquinas e equipamentos', 'Produtos e serviços']; // Subitens para "Produtos e Serviços"
 
   return (
