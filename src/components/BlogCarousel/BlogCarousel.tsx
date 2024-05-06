@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './BlogCarousel.module.scss'; // Estilo do componente
-import BlogImage1 from '../../assets/img/hiperserras-site.png'; // Importe as imagens desejadas
+import { Box, Typography, Link, Grid } from '@mui/material';
+import { styled } from '@mui/system';
+import BlogImage1 from '../../assets/img/hiperserras-site.png';
 
 const BlogCarousel = () => {
-  // Dados fictícios das notícias do blog
   const blogPosts = [
     {
       id: 1,
@@ -11,46 +11,62 @@ const BlogCarousel = () => {
       date: '24 de Fevereiro de 2018',
       category: 'Negócios',
       title: 'Escritório Loft com Decoração Vintage para Trabalhar',
-      description: 'Não é segredo que a indústria digital está em alta. Desde startups emocionantes até marcas globais, as empresas estão alcançando...',
+      description:
+        'Não é segredo que a indústria digital está em alta. Desde startups emocionantes até marcas globais, as empresas estão alcançando...',
     },
     {
-        id: 1,
-        image: BlogImage1,
-        date: '24 de Fevereiro de 2018',
-        category: 'Negócios',
-        title: 'Escritório Loft com Decoração Vintage para Trabalhar',
-        description: 'Não é segredo que a indústria digital está em alta. Desde startups emocionantes até marcas globais, as empresas estão alcançando...',
-      },
-      {
-        id: 1,
-        image: BlogImage1,
-        date: '24 de Fevereiro de 2018',
-        category: 'Negócios',
-        title: 'Escritório Loft com Decoração Vintage para Trabalhar',
-        description: 'Não é segredo que a indústria digital está em alta. Desde startups emocionantes até marcas globais, as empresas estão alcançando...',
-      },
-    // Adicione mais notícias conforme necessário
+      id: 2,
+      image: BlogImage1,
+      date: '24 de Fevereiro de 2018',
+      category: 'Negócios',
+      title: 'Escritório Loft com Decoração Vintage para Trabalhar',
+      description:
+        'Não é segredo que a indústria digital está em alta. Desde startups emocionantes até marcas globais, as empresas estão alcançando...',
+    },
+    {
+      id: 3,
+      image: BlogImage1,
+      date: '24 de Fevereiro de 2018',
+      category: 'Negócios',
+      title: 'Escritório Loft com Decoração Vintage para Trabalhar',
+      description:
+        'Não é segredo que a indústria digital está em alta. Desde startups emocionantes até marcas globais, as empresas estão alcançando...',
+    },
   ];
 
+  const StyledBox = styled(Box)({
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '5px',
+    marginBottom: '20px',
+  });
+
   return (
-    <div className={styles.blogContainer}>
-      <h2>Blog mais recente</h2>
-      <div className={styles.blogPosts}>
+    <Box paddingBottom={10} sx={{ maxWidth: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <Typography variant="h2" paddingTop={10} paddingBottom={5} fontSize={30} fontWeight={600} fontFamily={'Montserrat'}>Blog mais recente</Typography>
+      <Grid container spacing={2}>
         {blogPosts.map(post => (
-          <div key={post.id} className={styles.blogPost}>
-            <div className={styles.postContent}>
-            {/* <img src={post.image} alt={post.title} /> */}
-            <div className={styles.div}></div>
-              <p className={styles.date}>{post.date}</p>
-              <p className={styles.category}>{post.category}</p>
-              <h3>{post.title}</h3>
-              <p className={styles.description}>{post.description}</p>
-              <a href="#">Leia Mais</a>
-            </div>
-          </div>
+          <Grid key={post.id} item xs={12} md={6} lg={4}>
+            <StyledBox>
+              <img src={post.image} alt={post.title} style={{ maxWidth: '100%', marginBottom: '10px' }} />
+              <Typography variant="body2" fontFamily={'Montserrat'} sx={{ marginBottom: '10px' }}>
+                {post.date}
+              </Typography>
+              <Typography variant="body2" fontFamily={'Montserrat'} fontSize={15} sx={{ color: '#666', marginBottom: '10px' }}>
+                {post.category}
+              </Typography>
+              <Typography variant="h3"  fontFamily={'Montserrat'} fontSize={20}  fontWeight={600} sx={{ marginBottom: '10px' }}>
+                {post.title}
+              </Typography>
+              <Typography variant="body1" sx={{ marginBottom: '10px' }}>
+                {post.description}
+              </Typography>
+              <Link href="#">Leia Mais</Link>
+            </StyledBox>
+          </Grid>
         ))}
-      </div>
-    </div>
+      </Grid>
+    </Box>
   );
 };
 

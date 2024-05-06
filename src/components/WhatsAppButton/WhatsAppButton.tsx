@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './WhatsAppButton.module.scss'; 
-import OtherStyles from './CatalogButton.module.scss'; 
+// import OtherStyles from './CatalogButton.module.scss'; 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
@@ -18,24 +18,24 @@ export const WhatsAppButton = () => {
   );
 };
 
-export const CatalogButton = () => {
-  const handleClick = () => {
-    // Lógica para abrir o catálogo
-    window.open('/catalog', '_blank');
-  };
+// export const CatalogButton = () => {
+//   const handleClick = () => {
+//     // Lógica para abrir o catálogo
+//     window.open('/catalog', '_blank');
+//   };
 
-  return (
-    <button className={OtherStyles.catalogButton} onClick={handleClick}>
-      Ver catálogo
-    </button>
-  );
-};
+//   return (
+//     <button className={OtherStyles.catalogButton} onClick={handleClick}>
+//       Ver catálogo
+//     </button>
+//   );
+// };
 
 const FloatingButtons = () => {
   return (
     <div >
       <WhatsAppButton />
-      <CatalogButton />
+      {/* <CatalogButton /> */}
     </div>
   );
 };

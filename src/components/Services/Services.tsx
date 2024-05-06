@@ -1,73 +1,69 @@
 import React from 'react';
-import styles from './Services.module.scss';
-import Company from '../../assets/background/company-background.jpg';
-import ArrowRightICon from '../../assets/icons/arrow-right-icon.png';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { faArrowAltCircleDown, faArrowAltCircleRight, faArrowRight, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { Box, Typography, Grid, Card, CardContent, Divider } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart, faUsers, faTools, faChalkboardTeacher, faMapMarkerAlt, faBuilding, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Services = () => {
-    return (
-        <div className={styles.services}>
-            <h2 className={styles.servicesTitle}>
-                <FontAwesomeIcon style={{marginRight:'1rem', color: '#D39E00'}} icon={faArrowRight} />
-                Nossos Serviços</h2>
-            <p className={styles.servicesSubTitle}>
-                Somos especialistas em serra circular, máquinas de serra fita, laminas de serra fita, máquinas de serra circular e consultoria técnica. Oferecemos produtos de extrema qualidade e preços altamente competitivos com o intuito de promover o melhor desempenho na operação e custo beneficio do cliente
-            </p>
-            <div className={styles.servicesContainer}>
-                <div className={styles.serviceCard}>
-                    <div className={styles.img}>
+  const servicesData = [
+    {
+      title: "PRODUTOS",
+      description: "Extrema qualidade. Fornecedores rigorosamente avaliados para oferecer os melhores itens para o corte.",
+      icon: faShoppingCart
+    },
+    {
+      title: "A HIPERION",
+      description: "Processo de compra descomplicado.",
+      icon: faBuilding
+    },
+    {
+      title: "NOSSA EQUIPE",
+      description: "Equipe Especialista. Time técnico e perito no assunto, altamente qualificado para melhorar processos e solucionar problemas rapidamente.",
+      icon: faUsers
+    },
+    {
+      title: "CENTRO DE SOLDA",
+      description: "Centro de soldagem. Contamos com um dos centros de soldagem de serras de fita mais capacitados do Brasil.",
+      icon: faTools
+    },
+    {
+      title: "TREINAMENTOS",
+      description: "Consultoria e treinamento. Capacitamos a sua equipe e oferecemos consultoria personalizada para melhorar o desempenho de corte.",
+      icon: faChalkboardTeacher
+    },
+    {
+      title: "LOCALIZAÇÃO",
+      description: "Localização estratégica. Situado no principal eixo rodoviário do país, atuamos com agilidade no transporte e entrega de mercadorias.",
+      icon: faMapMarkerAlt
+    }
+  ];
 
-                    </div>
-                    {/* <img src={Company} alt="Empresa" /> */}
-                    <h3 className={styles.serviceTitle}>PRODUTOS</h3>
-                    <p className={styles.serviceDescription}>Extrema qualidade</p>
-                    <p className={styles.serviceInfo}>Fornecedores rigorosamente avaliados para oferecer os melhores itens para o corte.</p>
-                </div>
-                <div className={styles.serviceCard}>
-                    <div className={styles.img}>
-
-                    </div>
-                    <h3 className={styles.serviceTitle}>A HIPERION</h3>
-                    <p className={styles.serviceDescription}>Processo de compra descomplicado.</p>
-                    <p className={styles.serviceInfo}>Trabalhamos para oferecer a melhora contínua na experiência de compra.</p>
-                </div>
-                <div className={styles.serviceCard}>
-                    <div className={styles.img}>
-
-                    </div>
-                    <h3 className={styles.serviceTitle}>NOSSA EQUIPE</h3>
-                    <p className={styles.serviceDescription}>Equipe Especialista.</p>
-                    <p className={styles.serviceInfo}>Time técnico e perito no assunto, altamente qualificado para melhorar processos e solucionar problemas rapidamente.</p>
-                </div>
-                <div className={styles.serviceCard}>
-                    <div className={styles.img}>
-
-                    </div>
-                    <h3 className={styles.serviceTitle}>CENTRO DE SOLDA</h3>
-                    <p className={styles.serviceDescription}>Centro de soldagem</p>
-                    <p className={styles.serviceInfo}>Contamos com um dos centros de soldagem de serras de fita mais capacitados do Brasil.</p>
-                </div>
-                <div className={styles.serviceCard}>
-                    <div className={styles.img}>
-
-                    </div>
-                    <h3 className={styles.serviceTitle}>TREINAMENTOS</h3>
-                    <p className={styles.serviceDescription}>Consultoria e treinamento.</p>
-                    <p className={styles.serviceInfo}>Capacitamos a sua equipe e oferecemos consultoria personalizada para melhorar o desempenho de corte.</p>
-                </div>
-                <div className={styles.serviceCard}>
-                    <div className={styles.img}>
-
-                    </div>
-                    <h3 className={styles.serviceTitle}>LOCALIZAÇÃO</h3>
-                    <p className={styles.serviceDescription}>Localização estratégica</p>
-                    <p className={styles.serviceInfo}>Situado no principal eixo rodoviário do país, atuamos com agilidade no transporte e entrega de mercadorias.</p>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <Box id="services" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', minHeight: '100vh', backgroundColor: '#f7f7f7', paddingBottom: '5rem', paddingTop: '5rem' }}>
+      <Typography  variant="h2" fontSize={25} fontWeight={600} fontFamily="Montserrat, sans-serif" marginBottom={2} sx={{ display: 'flex', alignItems: 'center', color: '#D39E00' }}>
+        <FontAwesomeIcon style={{ marginRight: '1rem' }} icon={faArrowRight} />
+        Nossos Serviços
+      </Typography>
+      <Typography variant="body1" color="#696969"  fontSize={15} fontFamily="Montserrat, sans-serif" marginBottom={5} sx={{ maxWidth: '600px', color: '#505050', margin: '0 auto' }}>
+        Somos especialistas em serra circular, máquinas de serra fita, laminas de serra fita, máquinas de serra circular e consultoria técnica. Oferecemos produtos de extrema qualidade e preços altamente competitivos com o intuito de promover o melhor desempenho na operação e custo benefício do cliente
+      </Typography>
+      <Grid container spacing={3} marginTop={5} >
+        {servicesData.map((service, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card className="service-card" sx={{ width: '100%', backgroundColor: '#F2BF27', height: '100%' }}>
+              <CardContent>
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }}>
+                  <FontAwesomeIcon icon={service.icon} style={{ marginRight: '10px', color: '#f7f7f7' }} size="lg" />
+                  <Typography variant="h3" fontSize={20} fontWeight={600} fontFamily="Montserrat, sans-serif" sx={{ color: '#fff' }}>{service.title}</Typography>
+                </Box>
+                <Divider sx={{ backgroundColor: '#fff' }} />
+                <Typography variant="body1" fontSize={13} fontWeight={400} fontFamily="Montserrat, sans-serif" sx={{ color: '#fff', marginTop: '10px', marginBottom: '20px' }}>{service.description}</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
 };
 
 export default Services;
