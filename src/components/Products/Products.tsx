@@ -1,10 +1,12 @@
 import React from 'react';
-import { Box, Typography, Link, Card, CardContent, CardMedia, Grid } from '@mui/material';
+import { Box, Typography, Card, CardContent, CardMedia, Grid, Link } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom'; // Importe o hook useNavigate
 
 const products = [
   {
+    id: 1,
     title: 'Lâminas de Serra Fita',
     topics: [
       'Aço Carbono - Kortz',
@@ -14,6 +16,7 @@ const products = [
     imageUrl: 'https://lirp.cdn-website.com/9235761d/dms3rep/multi/opt/SERRA+FITA+SEM+FUNDO-400w.png',
   },
   {
+    id: 2,
     title: 'Serras Circulares',
     topics: [
       'Metal Duro (TCT)',
@@ -24,6 +27,7 @@ const products = [
     imageUrl: 'https://lirp.cdn-website.com/9235761d/dms3rep/multi/opt/CS-220__2_-removebg-preview-447w.png',
   },
   {
+    id: 3,
     title: 'Máquinas e Equipamentos',
     topics: [
       'Máquinas de corte',
@@ -36,6 +40,13 @@ const products = [
 ];
 
 const Products = () => {
+  const navigate = useNavigate(); // Hook para navegação
+
+  // Função para redirecionar para a página de detalhes do produto
+  const handleProductClick = (productId: number) => {
+    navigate(`/products/${productId}`); // Redirecionamento para a página de detalhes
+  };
+
   return (
     <Box sx={{ background: '#F2BF27', paddingBottom: 10 }}> 
       <Typography variant="h2" color="#fff" fontSize={30} fontWeight={600} paddingTop={5} align="center" marginBottom={2}>
@@ -46,18 +57,21 @@ const Products = () => {
         Descubra a qualidade e variedade de nossa linha de produtos
       </Typography>
       <Grid container spacing={2} justifyContent="center" padding={10}>
-        {products.map((product, index) => (
-          <Grid key={index} item xs={12} sm={6} md={4}>
-            <Card style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '530px', width: '300px' }}>
+        {products.map((product) => (
+          <Grid key={product.id} item xs={12} sm={6} md={4}>
+            <Card
+              style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '530px', width: '300px', cursor: 'pointer' }}
+              onClick={() => handleProductClick(product.id)} // Redirecionar ao clicar no card
+            >
               <CardMedia
                 component="img"
                 height="200"
                 width="100"
                 image={product.imageUrl}
-                alt={`Imagem ${index + 1}`}
+                alt={product.title}
               />
               <CardContent sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                <Typography gutterBottom variant="h5" fontSize={20} component="div">
+                <Typography gutterBottom variant="h5" fontSize={20} component="div" color="#000">
                   {product.title}
                 </Typography>
                 <ul>
@@ -67,7 +81,7 @@ const Products = () => {
                 </ul>
               </CardContent>
               <Box p={2}>
-                <Link href="#" color="primary">
+                <Link component="div" variant="body1" color="primary" align="center">
                   SAIBA MAIS
                 </Link>
               </Box>
