@@ -1,43 +1,21 @@
 import React from 'react';
-import styles from './WhatsAppButton.module.scss'; 
-// import OtherStyles from './CatalogButton.module.scss'; 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import './WhatsAppButton.module.scss'; // Importe o arquivo de estilos corretamente
 
-library.add(fab, faWhatsapp); 
 export const WhatsAppButton = () => {
   const handleClick = () => {
     window.open('https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_TELEFONE', '_blank');
   };
 
   return (
-    <button className={styles.whatsappButton} onClick={handleClick}>
-      <img style={{width: '50px'}} src="https://static.wixstatic.com/media/ada100_07f9738fca10410f96511509adb98db9~mv2.png" alt="" />
-    </button>
-  );
-};
-
-// export const CatalogButton = () => {
-//   const handleClick = () => {
-//     // Lógica para abrir o catálogo
-//     window.open('/catalog', '_blank');
-//   };
-
-//   return (
-//     <button className={OtherStyles.catalogButton} onClick={handleClick}>
-//       Ver catálogo
-//     </button>
-//   );
-// };
-
-const FloatingButtons = () => {
-  return (
-    <div >
-      <WhatsAppButton />
-      {/* <CatalogButton /> */}
+    <div className="cbh-phone cbh-green">
+      <a href="https://wa.me/5521980619913" target="_blank" className="phoneJs" title="">
+        <div className="cbh-ph-circle"></div>
+        <div className="cbh-ph-circle-fill"></div>
+        <div className="cbh-ph-img-circle1"></div>
+        <div className="kmacb__manager-border"></div>
+        <div className="kmacb__manager-fill"></div>
+        <div className="kmacb__manager-circle"></div>
+      </a>
     </div>
   );
 };
-
-export default FloatingButtons;

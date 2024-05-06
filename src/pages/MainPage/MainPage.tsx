@@ -17,8 +17,7 @@ import PartnersAndCustomers from "../../components/PartnersAndCustomers/Partners
 
 function MainPage() {
   return (
-    <div className="App">
-      {/* <Header/> */}
+    <div >
       <Hero />
       <AboutUs />
       <Services />
@@ -27,11 +26,7 @@ function MainPage() {
       <PartnersAndCustomers/>
       <BlogCarousel />
       <ContactForm />
-      {/* <Footer /> */}
-      
 
-      {/* <WhatsAppButton /> */}
-      {/* <CatalogButton/> */}
     </div>
   );
 }

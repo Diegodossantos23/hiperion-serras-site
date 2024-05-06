@@ -1,27 +1,85 @@
-.whatsappButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    // background-color: #25D366;
-    background-color: #fff;
+.cbh-phone {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  visibility: visible !important;
+  z-index: 9999; /* Aumente o valor do z-index para garantir que o botão esteja acima de outros elementos */
+}
 
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // transition: background-color 0.3s ease;
-  
-    &:hover {
-    //   background-color: #128C7E;
-    background-color: #128C7E;
+.cbh-phone.cbh-show {
+  visibility: visible;
+}
 
-    }
+.kmacb__manager-border {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 50%;
+  left: 50%;
+  margin-top: -39.5px;
+  margin-left: -39.5px;
+  border-radius: 100%;
+  border: 2px solid #ffe787;
+  -webkit-animation: kmacb__manager-border-anim 1.5s ease-in-out .5s infinite;
+  -moz-animation: kmacb__manager-border-anim 1.5s ease-in-out .5s infinite;
+  -ms-animation: kmacb__manager-border-anim 1.5s ease-in-out .5s infinite;
+  -o-animation: kmacb__manager-border-anim 1.5s ease-in-out .5s infinite;
+  animation: kmacb__manager-border-anim 1.5s ease-in-out .5s infinite;
+  opacity: .8;
+  transform-origin: center;
+}
+
+.kmacb__manager-fill {
+  background: #52aff7 center bottom no-repeat;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 50%;
+  left: 50%;
+  margin-top: -37.5px;
+  margin-left: -37.5px;
+  border-radius: 100%;
+  opacity: .5;
+  -webkit-animation: kmacb__manager-fill-anim 1.5s ease-in-out infinite;
+  -moz-animation: kmacb__manager-fill-anim 1.5s ease-in-out infinite;
+  -ms-animation: kmacb__manager-fill-anim 1.5s ease-in-out infinite;
+  -o-animation: kmacb__manager-fill-anim 1.5s ease-in-out infinite;
+  animation: kmacb__manager-fill-anim 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.kmacb__manager-circle {
+  background: #52aff7;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -60px;
+  border-radius: 100%;
+}
+
+@keyframes kmacb__manager-border-anim {
+  0% {
+    transform: scale(1);
   }
-  
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes kmacb__manager-fill-anim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
