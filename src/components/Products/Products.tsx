@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Typography,
@@ -6,7 +5,6 @@ import {
   CardContent,
   CardMedia,
   Grid,
-  Link,
   Button,
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

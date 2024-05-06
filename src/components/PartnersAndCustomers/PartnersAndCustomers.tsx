@@ -1,4 +1,3 @@
-import RePartnersAndCustomersct from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./PartnersAndCustomers.module.scss"; // Estilo do componente
@@ -19,13 +18,13 @@ const PartnersAndCustomers = () => {
     // Adicione mais parceiros conforme necessário
   ];
 
-  const clientes = [
-    { id: 1, image: Bahco, alt: "Parceiro 1" },
-    { id: 2, image: Wikus, alt: "Parceiro 2" },
-    { id: 3, image: Fibra, alt: "Parceiro 3" },
-    { id: 4, image: Eberle, alt: "Parceiro 3" },
-    // Adicione mais clientes conforme necessário
-  ];
+  // const clientes = [
+  //   { id: 1, image: Bahco, alt: "Parceiro 1" },
+  //   { id: 2, image: Wikus, alt: "Parceiro 2" },
+  //   { id: 3, image: Fibra, alt: "Parceiro 3" },
+  //   { id: 4, image: Eberle, alt: "Parceiro 3" },
+  //   // Adicione mais clientes conforme necessário
+  // ];
 
   return (
     <div className={styles.partnersAndCustomers}>

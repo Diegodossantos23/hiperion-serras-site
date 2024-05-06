@@ -3,7 +3,6 @@ import Header from "./components/AppBar/Header";
 import Footer from "./components/Footer/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton/WhatsAppButton";
 
-import MainPage from "./pages/MainPage/MainPage";
 import Routing from "./routes/Routing";
 
 function App() {

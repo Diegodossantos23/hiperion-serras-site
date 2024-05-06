@@ -11,7 +11,6 @@ const Routing = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="/produtos" element={<Products />} />
         <Route path="/produtos/:productId" element={<ProductPage />} /> {/* Adicionando a rota para a página de detalhes do produto */}
-        {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
     </Router>
   );
